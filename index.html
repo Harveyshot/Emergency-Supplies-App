@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Supplies">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#0E100D">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<link rel="icon" href="data:image/png;base64,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">
+<title>Emergency Supplies</title>
+<style>
+/* Layout idea: a field-kit ledger — status strip on top (expired / use soon / good), then one dated list sorted by Use By. Single dark theme by choice. */
+:root {
+  --bg: #0E100D; --surface: #171A15; --soft: #20241D; --ink: #F1EFE6; --muted: #A4A895; --line: #30352B;
+  --khaki: #C8B273; --khaki-dim: rgba(200,178,115,.35); --khaki-faint: rgba(200,178,115,.12);
+  --red: #E5533D; --amber: #EFA43A; --green: #7FB069; --ink-dark: #15140E;
+  --font: "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  --mono: "Cascadia Mono", "Consolas", ui-monospace, Menlo, monospace;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body { background: var(--bg); color: var(--ink); font-family: var(--font); font-size: 15px; line-height: 1.45;
+  background-image: repeating-linear-gradient(45deg, rgba(255,255,255,.012) 0 2px, transparent 2px 9px); }
+button, input, select, textarea { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--khaki); outline-offset: 2px; }
+.wrap { max-width: 1100px; margin: 0 auto; padding: 0 max(18px, env(safe-area-inset-right)) calc(60px + env(safe-area-inset-bottom)) max(18px, env(safe-area-inset-left)); }
+header { padding-top: calc(24px + env(safe-area-inset-top)) !important; }
+.btn.sync { border-color: var(--amber); }
+.unsent { border-color: var(--amber) !important; color: var(--ink) !important; }
+@media (max-width: 620px) { .actions { width: 100%; } .actions .btn { flex: 1 1 auto; } h1 { font-size: 24px; } input, select, textarea { font-size: 16px !important; } }
+header { display: flex; flex-wrap: wrap; gap: 14px; justify-content: space-between; align-items: flex-end; padding: 24px 0 16px; border-bottom: 2px solid var(--khaki); }
+h1 { margin: 0; font-size: 28px; letter-spacing: .01em; }
+h1 small { display: block; font-size: 12.5px; font-weight: 500; color: var(--muted); letter-spacing: .04em; margin-top: 3px; }
+.actions { display: flex; gap: 8px; flex-wrap: wrap; }
+.btn { border: 1px solid var(--khaki-dim); background: var(--soft); border-radius: 6px; padding: 8px 14px; cursor: pointer; font-weight: 600; font-size: 14px; }
+.btn:hover { border-color: var(--khaki); }
+.btn.primary { background: var(--khaki); color: var(--ink-dark); border-color: var(--khaki); }
+.btn.danger { color: var(--red); border-color: rgba(229,83,61,.45); }
+.btn.small { padding: 4px 10px; font-size: 13px; }
+.btn.ghost { background: transparent; border-color: transparent; }
+
+.status { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 10px; margin: 18px 0 8px; }
+.stat { border: 1px solid var(--line); border-left-width: 5px; border-radius: 8px; padding: 10px 14px; background: var(--surface); cursor: pointer; text-align: left; }
+.stat b { display: block; font-size: 26px; font-family: var(--mono); line-height: 1.1; }
+.stat span { font-size: 12px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
+.stat.expired { border-left-color: var(--red); } .stat.expired b { color: var(--red); }
+.stat.soon { border-left-color: var(--amber); } .stat.soon b { color: var(--amber); }
+.stat.good { border-left-color: var(--green); } .stat.good b { color: var(--green); }
+.stat.nodate { border-left-color: var(--muted); }
+.stat[aria-pressed="true"] { background: var(--soft); box-shadow: 0 0 0 1px var(--khaki); }
+
+.alert { border: 1px solid var(--amber); background: rgba(239,164,58,.1); border-radius: 8px; padding: 12px 16px; margin: 10px 0; }
+.alert.red { border-color: var(--red); background: rgba(229,83,61,.1); }
+.alert b { color: var(--amber); } .alert.red b { color: var(--red); }
+.banner { border: 1px solid var(--khaki-dim); border-radius: 8px; padding: 10px 14px; margin: 10px 0; font-size: 14px; color: var(--muted); }
+.banner.warn { border-color: var(--red); color: var(--ink); }
+
+.toolbar { display: grid; grid-template-columns: 1fr auto auto; gap: 8px; margin: 14px 0 10px; }
+.toolbar input, .toolbar select { background: var(--surface); border: 1px solid var(--khaki-dim); border-radius: 6px; padding: 9px 12px; min-width: 0; }
+@media (max-width: 620px) { .toolbar { grid-template-columns: 1fr 1fr; } .toolbar #q { grid-column: 1 / -1; } }
+
+.list { display: grid; gap: 8px; }
+.item { display: grid; grid-template-columns: 108px 1fr auto; gap: 14px; align-items: center; background: var(--surface); border: 1px solid var(--line); border-left: 5px solid var(--green); border-radius: 8px; padding: 10px 14px; }
+.item.expired { border-left-color: var(--red); } .item.soon { border-left-color: var(--amber); } .item.nodate { border-left-color: var(--muted); }
+.date { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+.date b { display: block; font-size: 15px; }
+.date span { font-size: 12px; color: var(--muted); }
+.item.expired .date span { color: var(--red); font-weight: 700; } .item.soon .date span { color: var(--amber); font-weight: 700; }
+.name { font-weight: 700; font-size: 16px; }
+.meta { color: var(--muted); font-size: 13px; display: flex; flex-wrap: wrap; gap: 4px 12px; margin-top: 2px; }
+.meta .cat { color: var(--khaki); }
+.qty { font-family: var(--mono); color: var(--ink); }
+.row-actions { display: flex; gap: 6px; flex-wrap: wrap; justify-content: flex-end; }
+@media (max-width: 620px) { .item { grid-template-columns: 1fr; gap: 6px; } .row-actions { justify-content: flex-start; } }
+.empty { text-align: center; padding: 50px 20px; border: 1px dashed var(--khaki-dim); border-radius: 8px; background: var(--surface); }
+.empty p { color: var(--muted); max-width: 52ch; margin: 8px auto 16px; }
+
+dialog { background: var(--surface); color: var(--ink); border: 1px solid var(--khaki); border-radius: 10px; padding: 0; width: min(640px, 94vw); box-shadow: 0 30px 80px rgba(0,0,0,.6); }
+dialog::backdrop { background: rgba(0,0,0,.7); }
+.d-head { display: flex; justify-content: space-between; align-items: center; padding: 16px 20px; border-bottom: 1px solid var(--khaki-dim); }
+.d-head h2 { margin: 0; font-size: 20px; }
+.x { background: none; border: none; color: var(--khaki); font-size: 26px; cursor: pointer; line-height: 1; }
+.d-body { padding: 16px 20px; display: grid; gap: 14px; max-height: 70vh; overflow-y: auto; }
+.d-foot { padding: 14px 20px; border-top: 1px solid var(--khaki-dim); display: flex; gap: 8px; justify-content: flex-end; flex-wrap: wrap; }
+.d-foot .left { margin-right: auto; display: flex; gap: 8px; }
+.fields { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; }
+.field { display: grid; gap: 4px; align-content: start; }
+.field.wide { grid-column: 1 / -1; }
+.field label { font-size: 13px; font-weight: 600; }
+.field .hint { font-size: 12px; color: var(--muted); }
+.field input, .field select, .field textarea { background: var(--bg); border: 1px solid var(--line); border-radius: 6px; padding: 8px 10px; width: 100%; }
+.field input:focus, .field select:focus, .field textarea:focus { border-color: var(--khaki); outline: none; }
+.field textarea { min-height: 70px; resize: vertical; }
+.err { color: var(--red); font-weight: 600; font-size: 14px; min-height: 1em; }
+.guide h3 { margin: 6px 0 4px; font-size: 16px; color: var(--khaki); }
+.guide p, .guide li { color: var(--ink); } .guide p { margin: 0 0 8px; } .guide ul, .guide ol { margin: 0 0 8px; padding-left: 20px; }
+table.log { width: 100%; border-collapse: collapse; font-size: 14px; }
+table.log th { text-align: left; font-size: 11px; text-transform: uppercase; letter-spacing: .08em; color: var(--khaki); border-bottom: 1px solid var(--khaki-dim); padding: 6px; }
+table.log td { padding: 6px; border-bottom: 1px solid var(--line); }
+.toast { position: fixed; left: 50%; bottom: 20px; transform: translateX(-50%); background: var(--khaki); color: var(--ink-dark); font-weight: 600; padding: 10px 16px; border-radius: 6px; box-shadow: 0 8px 24px rgba(0,0,0,.5); z-index: 99; }
+.hidden { display: none !important; }
+.alert-dlg { background: #C9201B; color: #fff; border: 3px solid #111; border-radius: 14px; width: min(420px, 94vw); box-shadow: 0 20px 60px rgba(0,0,0,.6); }
+.alert-dlg .a-head { padding: 18px 20px 10px; border-bottom: 2px solid rgba(255,255,255,.85); margin: 0 18px; padding-left: 0; padding-right: 0; display: flex; gap: 10px; align-items: center; font-size: 22px; font-weight: 800; }
+.alert-dlg .a-body { padding: 14px 20px; display: grid; gap: 10px; max-height: 55vh; overflow-y: auto; }
+.alert-dlg .a-item { border-bottom: 1px solid rgba(255,255,255,.3); padding-bottom: 10px; }
+.alert-dlg .a-item:last-child { border-bottom: none; }
+.alert-dlg .a-item b { font-size: 17px; display: block; }
+.alert-dlg .a-item div { font-size: 14px; }
+.alert-dlg .a-item em { font-size: 14px; }
+.alert-dlg .a-snooze { padding: 4px 20px 0; border-top: 1px solid rgba(255,255,255,.3); margin: 0 0; }
+.alert-dlg .a-snooze label { font-weight: 700; display: block; margin: 10px 0 8px; font-size: 16px; }
+.alert-dlg .a-row { display: flex; gap: 8px; align-items: center; }
+.alert-dlg .a-row input { width: 80px; padding: 8px 10px; border-radius: 6px; border: none; color: #111; background: #fff; font-size: 16px; }
+.alert-dlg .seg2 { border: none; border-radius: 6px; padding: 9px 13px; font-weight: 700; cursor: pointer; background: #555; color: #fff; }
+.alert-dlg .seg2[aria-pressed="true"] { background: #3B82F6; }
+.alert-dlg .a-foot { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 16px 20px 20px; }
+.alert-dlg .a-foot button { border: none; border-radius: 6px; padding: 12px; font-weight: 700; font-size: 15px; cursor: pointer; color: #fff; }
+.alert-dlg .a-accept { background: #43A047; } .alert-dlg .a-snz { background: #555; }
+
+@media print {
+  body { background: #fff; color: #000; font-size: 11pt; }
+  header .actions, .toolbar, .status, .alert, .banner, .row-actions, .noprint { display: none !important; }
+  header { border-bottom: 2px solid #000; }
+  .item { break-inside: avoid; background: #fff; border-color: #999; color: #000; padding: 6px 10px; }
+  .meta, .date span { color: #333 !important; }
+  .printnote { display: block !important; }
+}
+.printnote { display: none; font-size: 10pt; margin: 6px 0; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Emergency Supplies<small>Inventory by Use By date</small></h1>
+    <div class="actions">
+      <button class="btn" type="button" id="guideBtn">Guide</button>
+      <button class="btn" type="button" id="moreBtn">Backup / Export</button>
+      <button class="btn sync" type="button" id="sendBtn">Send update</button>
+      <button class="btn sync" type="button" id="loadBtn">Load update</button><input type="file" id="loadFile" accept=".json,application/json,text/plain" class="hidden">
+      <button class="btn" type="button" id="logBtn">Used &amp; donated log</button>
+      <button class="btn primary" type="button" id="addBtn">+ Add item</button>
+    </div>
+  </header>
+  <p class="printnote" id="printNote"></p>
+  <div id="banner" class="banner hidden" role="status"></div>
+  <div id="alerts"></div>
+  <div class="status" id="status"></div>
+  <div class="toolbar">
+    <input id="q" type="search" placeholder="Search items, locations, notes…" aria-label="Search">
+    <select id="catFilter" aria-label="Filter by category"></select>
+    <select id="locFilter" aria-label="Filter by location"></select>
+  </div>
+  <main class="list" id="list"></main>
+</div>
+
+<dialog id="dlg"></dialog>
+<dialog id="alertDlg" class="alert-dlg"></dialog>
+<div id="toastRoot"></div>
+
+<script>
+"use strict";
+const CATEGORIES = ["Food", "Water", "Water purification", "Medical / first aid", "Medicine", "Fire & cooking fuel", "Light & power", "Tools & gear", "Ammunition", "Hygiene & sanitation", "Pet supplies", "Documents & cash", "Other"];
+const UNITS = ["cans", "pouches", "boxes", "bags", "jars", "bottles", "gallons", "cases", "rounds", "boxes of rounds", "tablets", "packs", "each", "lbs", "oz"];
+const KEY = "emergency-supplies-v1";
+const $ = (s, r = document) => r.querySelector(s);
+const esc = v => String(v ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+
+/* ---------- storage ---------- */
+let store = { items: [], log: [], deleted: [], settings: { alertMonths: 2 }, lastBackup: "", lastChange: "", lastSent: "", lastLoaded: "", alerts: {} };
+let canSave = true;
+function load() {
+  try { const raw = localStorage.getItem(KEY); if (raw) store = Object.assign(store, JSON.parse(raw)); }
+  catch (e) { canSave = false; }
+  try { localStorage.setItem(KEY + "-test", "1"); localStorage.removeItem(KEY + "-test"); } catch (e) { canSave = false; }
+}
+const nowISO = () => new Date().toISOString();
+const stamp = it => it.updated || it.added || "";
+function tombstone(id) { store.deleted.push({ id, at: nowISO() }); if (store.deleted.length > 2000) store.deleted = store.deleted.slice(-2000); }
+function save(isChange = true) {
+  if (isChange) store.lastChange = nowISO();
+  try { localStorage.setItem(KEY, JSON.stringify(store)); }
+  catch (e) { canSave = false; toast("Couldn't save. This browser is blocking storage.", 4000); }
+}
+const uid = () => Date.now().toString(36) + Math.random().toString(36).slice(2, 8);
+
+/* ---------- dates ---------- */
+function todayStr() { const d = new Date(); return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0"); }
+const parseD = s => { const [y, m, d] = s.split("-").map(Number); return new Date(y, m - 1, d); };
+function addMonths(s, n) { const d = parseD(s); const day = d.getDate(); d.setMonth(d.getMonth() + n); if (d.getDate() < day) d.setDate(0); return d; }
+const daysBetween = (a, b) => Math.round((parseD(b) - parseD(a)) / 864e5);
+function fmtDate(s) { return s ? parseD(s).toLocaleDateString(undefined, { year: "numeric", month: "short", day: "numeric" }) : ""; }
+function statusOf(it) {
+  if (!it.useBy) return "nodate";
+  const t = todayStr();
+  if (it.useBy < t) return "expired";
+  if (parseD(it.useBy) <= addMonths(t, Number(store.settings.alertMonths) || 2)) return "soon";
+  return "good";
+}
+function whenText(it) {
+  if (!it.useBy) return "No date";
+  const d = daysBetween(todayStr(), it.useBy);
+  if (d < 0) return `Expired ${-d < 60 ? -d + " days" : Math.round(-d / 30.4) + " mo"} ago`;
+  if (d === 0) return "Use today";
+  if (d < 60) return `${d} day${d === 1 ? "" : "s"} left`;
+  if (d < 730) return `${Math.round(d / 30.4)} months left`;
+  return `${(d / 365.25).toFixed(1)} years left`;
+}
+
+/* ---------- UI helpers ---------- */
+function toast(msg, ms = 2600) { const r = $("#toastRoot"); r.innerHTML = `<div class="toast" role="status">${esc(msg)}</div>`; clearTimeout(toast.t); toast.t = setTimeout(() => r.innerHTML = "", ms); }
+const dlg = $("#dlg");
+function openDlg(html, onClick) {
+  dlg.innerHTML = html; dlg.onclick = e => { if (e.target === dlg) dlg.close(); const t = e.target.closest("button"); if (!t) return; if (t.matches("[data-close]")) return dlg.close(); onClick && onClick(t, e); };
+  if (!dlg.open) dlg.showModal();
+  const f = dlg.querySelector("[autofocus]"); f && f.focus();
+}
+function confirmDlg(title, text, ok) {
+  return new Promise(res => {
+    openDlg(`<div class="d-head"><h2>${esc(title)}</h2></div><div class="d-body"><p style="margin:0">${esc(text)}</p></div>
+      <div class="d-foot"><button class="btn" type="button" data-close>Cancel</button><button class="btn primary" type="button" data-ok>${esc(ok)}</button></div>`,
+      t => { if (t.matches("[data-ok]")) { dlg.onclose = null; dlg.close(); res(true); } });
+    dlg.onclose = () => { dlg.onclose = null; res(false); };
+  });
+}
+
+/* ---------- view state ---------- */
+const V = { q: "", cat: "all", loc: "all", status: "all" };
+function locations() { return [...new Set(store.items.map(i => i.location).filter(Boolean))].sort((a, b) => a.localeCompare(b)); }
+function shown() {
+  const q = V.q.trim().toLowerCase();
+  return store.items.filter(i =>
+    (V.cat === "all" || i.category === V.cat) && (V.loc === "all" || i.location === V.loc) &&
+    (V.status === "all" || statusOf(i) === V.status) &&
+    (!q || [i.name, i.category, i.location, i.notes].join(" ").toLowerCase().includes(q))
+  ).sort((a, b) => (a.useBy || "9999") .localeCompare(b.useBy || "9999") || a.name.localeCompare(b.name));
+}
+
+/* ---------- render ---------- */
+function render() {
+  const counts = { expired: 0, soon: 0, good: 0, nodate: 0 };
+  store.items.forEach(i => counts[statusOf(i)]++);
+  const months = Number(store.settings.alertMonths) || 2;
+  const st = (k, n, label) => `<button type="button" class="stat ${k}" data-status="${k}" aria-pressed="${V.status === k}"><b>${n}</b><span>${label}</span></button>`;
+  $("#status").innerHTML = store.items.length ? st("expired", counts.expired, "Expired") + st("soon", counts.soon, `Use within ${months} month${months === 1 ? "" : "s"}`) + st("good", counts.good, "Good") + st("nodate", counts.nodate, "No Use By date") : "";
+
+  const sb = $("#sendBtn");
+  const unsent = store.lastChange && store.lastChange > (store.lastSent || "");
+  sb.textContent = unsent ? "Send update •" : "Send update"; sb.classList.toggle("unsent", !!unsent);
+  sb.title = unsent ? "You've made changes since you last sent an update" : "";
+  const soon = store.items.filter(i => statusOf(i) === "soon"), expired = store.items.filter(i => statusOf(i) === "expired");
+  $("#alerts").innerHTML = (expired.length ? `<div class="alert red"><b>⚠ ${expired.length} item${expired.length === 1 ? " has" : "s have"} passed the Use By date:</b> ${expired.map(i => esc(i.name)).join(", ")}. Check, then eat, donate or discard.</div>` : "") +
+    (soon.length ? `<div class="alert"><b>⏰ Use within ${months} month${months === 1 ? "" : "s"}:</b> ${soon.map(i => `${esc(i.name)} (${esc(fmtDate(i.useBy))})`).join(", ")}. Eat them or donate them before they expire.</div>` : "");
+
+  const cats = [...new Set(store.items.map(i => i.category))].sort();
+  if (V.cat !== "all" && !cats.includes(V.cat)) V.cat = "all";
+  $("#catFilter").innerHTML = `<option value="all">All categories</option>` + cats.map(c => `<option ${c === V.cat ? "selected" : ""}>${esc(c)}</option>`).join("");
+  const locs = locations(); if (V.loc !== "all" && !locs.includes(V.loc)) V.loc = "all";
+  $("#locFilter").innerHTML = `<option value="all">All locations</option>` + locs.map(l => `<option ${l === V.loc ? "selected" : ""}>${esc(l)}</option>`).join("");
+
+  const list = shown(), el = $("#list");
+  $("#printNote").textContent = `Printed ${fmtDate(todayStr())} · ${list.length} items`;
+  if (!store.items.length) {
+    el.innerHTML = `<div class="empty"><h2 style="margin:0">No supplies yet</h2><p>Add your canned goods, freeze-dried meals, water, purification tablets, lighters, LifeStraws, ammunition and anything else you keep on hand. Items are listed by Use By date, and you'll be warned ${months} months before each one.</p><button class="btn primary" type="button" data-act="add">+ Add your first item</button></div>`;
+    return;
+  }
+  if (!list.length) { el.innerHTML = `<div class="empty"><p>Nothing matches those filters.</p><button class="btn" type="button" data-act="clear">Show everything</button></div>`; return; }
+  el.innerHTML = list.map(i => {
+    const s = statusOf(i);
+    return `<div class="item ${s}">
+      <div class="date"><b>${i.useBy ? esc(fmtDate(i.useBy)) : "—"}</b><span>${esc(whenText(i))}</span></div>
+      <div><div class="name">${esc(i.name)}</div>
+        <div class="meta"><span class="qty">${esc(i.qty ?? "")} ${esc(i.unit || "")}</span><span class="cat">${esc(i.category)}</span>${i.location ? `<span>📍 ${esc(i.location)}</span>` : ""}${i.notes ? `<span>${esc(i.notes)}</span>` : ""}</div></div>
+      <div class="row-actions">
+        <button class="btn small" type="button" data-use="${i.id}">Used</button>
+        <button class="btn small" type="button" data-donate="${i.id}">Donated</button>
+        <button class="btn small" type="button" data-edit="${i.id}">Edit</button>
+      </div></div>`;
+  }).join("");
+}
+
+/* ---------- add / edit ---------- */
+function openEditor(item, copy) {
+  const isNew = !item || copy;
+  const it = item ? Object.assign({}, item) : { category: "Food", qty: 1, unit: "cans", location: "" };
+  if (copy) { it.useBy = ""; }
+  const locs = locations();
+  openDlg(`<div class="d-head"><h2>${copy ? "Add more of this item" : isNew ? "Add an item" : "Edit item"}</h2><button class="x" type="button" data-close aria-label="Close">×</button></div>
+    <form class="d-body" id="ed" novalidate>
+      <div class="fields">
+        <div class="field wide"><label for="e_name">Item</label><input id="e_name" value="${esc(it.name || "")}" placeholder="e.g. Canned chili, Mountain House beef stroganoff, 9mm FMJ" autofocus></div>
+        <div class="field"><label for="e_cat">Category</label><select id="e_cat">${CATEGORIES.map(c => `<option ${c === it.category ? "selected" : ""}>${c}</option>`).join("")}</select></div>
+        <div class="field"><label for="e_useby">Use By date</label><input id="e_useby" type="date" value="${esc(it.useBy || "")}"><span class="hint">Leave blank for things that don't expire.</span></div>
+        <div class="field"><label for="e_qty">Quantity</label><input id="e_qty" type="number" min="0" step="any" value="${esc(it.qty ?? "")}"></div>
+        <div class="field"><label for="e_unit">Unit</label><input id="e_unit" list="unitList" value="${esc(it.unit || "")}"><datalist id="unitList">${UNITS.map(u => `<option value="${u}">`).join("")}</datalist></div>
+        <div class="field"><label for="e_loc">Location</label><input id="e_loc" list="locList" value="${esc(it.location || "")}" placeholder="e.g. Pantry, garage shelf 2, go-bag"><datalist id="locList">${locs.map(l => `<option value="${esc(l)}">`).join("")}</datalist></div>
+        <div class="field wide"><label for="e_notes">Notes</label><textarea id="e_notes" placeholder="Calories, servings, caliber, where you bought it…">${esc(it.notes || "")}</textarea></div>
+      </div>
+      <div class="err" id="e_err" role="alert"></div>
+    </form>
+    <div class="d-foot">${!isNew ? `<div class="left"><button class="btn danger" type="button" data-del>Delete</button><button class="btn" type="button" data-copy title="Same item, new batch with a different Use By date">Add another batch</button></div>` : ""}
+      <button class="btn" type="button" data-close>Cancel</button><button class="btn primary" type="button" data-save>Save</button></div>`,
+    async t => {
+      if (t.matches("[data-save]")) {
+        const name = $("#e_name").value.trim(); if (!name) { $("#e_err").textContent = "Give the item a name."; $("#e_name").focus(); return; }
+        const qtyRaw = $("#e_qty").value.trim(); const qty = qtyRaw === "" ? "" : Number(qtyRaw);
+        if (qtyRaw !== "" && !(qty >= 0)) { $("#e_err").textContent = "Quantity should be a number."; return; }
+        const rec = { id: isNew ? uid() : it.id, name, category: $("#e_cat").value, useBy: $("#e_useby").value, qty, unit: $("#e_unit").value.trim(), location: $("#e_loc").value.trim(), notes: $("#e_notes").value.trim(), added: isNew ? todayStr() : (it.added || todayStr()), updated: nowISO() };
+        if (isNew) store.items.push(rec); else store.items = store.items.map(x => x.id === rec.id ? rec : x);
+        save(); dlg.close(); render(); toast(isNew ? "Item added" : "Saved");
+      } else if (t.matches("[data-copy]")) { openEditor(it, true); }
+      else if (t.matches("[data-del]")) {
+        if (await confirmDlg("Delete this item?", `“${it.name}” will be removed from the list without being logged as used or donated. This can't be undone.`, "Delete")) {
+          store.items = store.items.filter(x => x.id !== it.id); tombstone(it.id); save(); render(); toast("Deleted");
+        }
+      }
+    });
+}
+
+/* ---------- used / donated ---------- */
+function openTake(id, action) {
+  const it = store.items.find(x => x.id === id); if (!it) return;
+  const verb = action === "donated" ? "Donated" : "Used";
+  const hasQty = typeof it.qty === "number";
+  openDlg(`<div class="d-head"><h2>${verb}: ${esc(it.name)}</h2><button class="x" type="button" data-close aria-label="Close">×</button></div>
+    <div class="d-body">
+      ${hasQty ? `<div class="field"><label for="t_n">How many ${esc(it.unit || "")}? (you have ${esc(it.qty)})</label><input id="t_n" type="number" min="0" step="any" value="${it.qty}" autofocus></div>` : `<p style="margin:0">This removes the item from your list.</p>`}
+      ${action === "donated" ? `<div class="field"><label for="t_to">Donated to (optional)</label><input id="t_to" placeholder="e.g. church food pantry"></div>` : ""}
+      <p class="hint" style="margin:0;color:var(--muted);font-size:13px">It's recorded in the Used &amp; donated log.${hasQty ? " If you take all of them, the item comes off the list." : ""}</p>
+      <div class="err" id="t_err"></div>
+    </div>
+    <div class="d-foot"><button class="btn" type="button" data-close>Cancel</button><button class="btn primary" type="button" data-ok>Mark ${verb.toLowerCase()}</button></div>`,
+    t => {
+      if (!t.matches("[data-ok]")) return;
+      let n = it.qty;
+      if (hasQty) { n = Number($("#t_n").value); if (!(n > 0)) { $("#t_err").textContent = "Enter how many."; return; } n = Math.min(n, it.qty); }
+      store.log.unshift({ id: uid(), date: todayStr(), action, name: it.name, qty: hasQty ? n : "", unit: it.unit || "", useBy: it.useBy || "", to: action === "donated" ? ($("#t_to").value.trim()) : "" });
+      if (hasQty && n < it.qty) { it.qty = Math.round((it.qty - n) * 1000) / 1000; it.updated = nowISO(); } else { store.items = store.items.filter(x => x.id !== id); tombstone(id); }
+      save(); dlg.close(); render(); toast(`Marked ${verb.toLowerCase()}`);
+    });
+}
+function openLog() {
+  const rows = store.log;
+  openDlg(`<div class="d-head"><h2>Used &amp; donated log</h2><button class="x" type="button" data-close aria-label="Close">×</button></div>
+    <div class="d-body">${rows.length ? `<table class="log"><thead><tr><th>Date</th><th>What</th><th>Item</th><th>Qty</th><th>Use By</th></tr></thead><tbody>
+      ${rows.map(r => `<tr><td>${esc(fmtDate(r.date))}</td><td>${r.action === "donated" ? "Donated" + (r.to ? " to " + esc(r.to) : "") : "Used"}</td><td>${esc(r.name)}</td><td>${esc(r.qty)} ${esc(r.unit)}</td><td>${esc(fmtDate(r.useBy))}</td></tr>`).join("")}</tbody></table>` : `<p style="margin:0;color:var(--muted)">Nothing yet. Items you mark Used or Donated are listed here, which helps with what to restock and with donation receipts.</p>`}</div>
+    <div class="d-foot">${rows.length ? `<div class="left"><button class="btn danger" type="button" data-clearlog>Clear log</button></div>` : ""}<button class="btn primary" type="button" data-close>Close</button></div>`,
+    async t => { if (t.matches("[data-clearlog]") && await confirmDlg("Clear the log?", "The used and donated history will be erased. Your current items stay.", "Clear")) { store.log = []; save(); toast("Log cleared"); } });
+}
+
+/* ---------- backup / export ---------- */
+function download(name, text, type) {
+  const url = URL.createObjectURL(new Blob([text], { type }));
+  const a = Object.assign(document.createElement("a"), { href: url, download: name }); document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 30000);
+}
+const csvCell = v => { const s = String(v ?? ""); return /[",\n]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s; };
+function openMore() {
+  const months = Number(store.settings.alertMonths) || 2;
+  openDlg(`<div class="d-head"><h2>Backup, export &amp; settings</h2><button class="x" type="button" data-close aria-label="Close">×</button></div>
+    <div class="d-body">
+      <div><button class="btn primary" type="button" data-backup style="width:100%">Back up everything (.json)</button>
+        <p class="hint" style="margin:6px 0 0;color:var(--muted);font-size:13px">One file with your items and log. Use it to keep a copy, move to another computer, or share with family.${store.lastBackup ? ` Last backup: ${esc(fmtDate(store.lastBackup))}.` : ""}</p></div>
+      <div><button class="btn" type="button" data-restore style="width:100%">Restore from a backup…</button><input type="file" id="r_file" accept=".json" class="hidden"></div>
+      <div><button class="btn" type="button" data-csv style="width:100%">Spreadsheet (.csv)</button>
+        <p class="hint" style="margin:6px 0 0;color:var(--muted);font-size:13px">Opens in Excel or Google Sheets.</p></div>
+      <div><button class="btn" type="button" data-print style="width:100%">Print the list</button>
+        <p class="hint" style="margin:6px 0 0;color:var(--muted);font-size:13px">Prints what's currently shown, by Use By date. Handy to tape inside the pantry door.</p></div>
+      <div class="field" style="border-top:1px solid var(--khaki-dim);padding-top:14px"><label for="s_months">Warn me this many months before the Use By date</label><input id="s_months" type="number" min="1" max="24" step="1" value="${months}" style="max-width:120px"></div>
+    </div>
+    <div class="d-foot"><button class="btn primary" type="button" data-close>Done</button></div>`,
+    t => {
+      if (t.matches("[data-backup]")) {
+        download(`Emergency Supplies backup ${todayStr()}.json`, packJSON(), "application/json");
+        store.lastBackup = todayStr(); save(false); render(); toast("Backup saved to your Downloads folder");
+      } else if (t.matches("[data-restore]")) $("#r_file").click();
+      else if (t.matches("[data-csv]")) {
+        const head = ["Use By", "Status", "Item", "Category", "Quantity", "Unit", "Location", "Notes"];
+        const lines = [head.join(",")].concat(shown().map(i => [i.useBy, ({ expired: "Expired", soon: "Use soon", good: "Good", nodate: "No date" })[statusOf(i)], i.name, i.category, i.qty, i.unit, i.location, i.notes].map(csvCell).join(",")));
+        download(`Emergency Supplies ${todayStr()}.csv`, "﻿" + lines.join("\r\n"), "text/csv");
+      } else if (t.matches("[data-print]")) { dlg.close(); setTimeout(() => window.print(), 100); }
+    });
+  $("#s_months").addEventListener("change", e => { const n = Math.round(Number(e.target.value)); if (n >= 1 && n <= 24) { store.settings.alertMonths = n; save(); render(); } });
+  $("#r_file").addEventListener("change", async e => {
+    const f = e.target.files[0]; if (!f) return;
+    let data; try { data = JSON.parse(await f.text()); } catch (_) { data = null; }
+    if (!data || data.format !== "emergency-supplies-backup") { toast("That file isn't an Emergency Supplies backup.", 4000); return; }
+    const replace = store.items.length ? await confirmDlg("Replace your list?", `Your ${store.items.length} current items and log will be replaced by the backup's ${(data.items || []).length} items. This can't be undone.`, "Replace my list") : true;
+    if (!replace) return;
+    store.items = data.items || []; store.log = data.log || []; store.deleted = data.deleted || []; store.settings = Object.assign({ alertMonths: 2 }, data.settings || {});
+    save(false); store.lastSent = store.lastChange; save(false); render(); toast(`Restored ${store.items.length} items`);
+  });
+}
+
+
+/* ---------- send / load updates between phones ---------- */
+function packJSON() { return JSON.stringify({ format: "emergency-supplies-backup", version: 2, exported: nowISO(), items: store.items, log: store.log, deleted: store.deleted, settings: store.settings }); }
+async function sendUpdate() {
+  const name = `Supplies update ${todayStr()}.json`;
+  const file = new File([packJSON()], name, { type: "application/json" });
+  try {
+    if (navigator.canShare && navigator.canShare({ files: [file] })) {
+      await navigator.share({ files: [file], title: "Emergency Supplies update", text: "Emergency Supplies update. Save the attachment to Files, then open the app and tap Load update." });
+    } else {
+      download(name, packJSON(), "application/json");
+      toast("Update saved to Downloads. Attach it to an email or message.", 4500);
+    }
+    store.lastSent = store.lastChange; save(false); render();
+  } catch (e) { if (!e || e.name !== "AbortError") toast("Couldn't share the update. Try again.", 4000); }
+}
+function mergeIn(data) {
+  const before = new Map(store.items.map(i => [i.id, i]));
+  const tomb = new Map(store.deleted.map(d => [d.id, d.at]));
+  (data.deleted || []).forEach(d => { if (!tomb.has(d.id) || tomb.get(d.id) < d.at) tomb.set(d.id, d.at); });
+  const map = new Map(before);
+  (data.items || []).forEach(i => { const l = map.get(i.id); if (!l || stamp(i) > stamp(l)) map.set(i.id, i); });
+  for (const [id, it] of map) { const t = tomb.get(id); if (t && t >= stamp(it)) map.delete(id); }
+  let added = 0, changed = 0, removed = 0;
+  for (const [id, it] of map) { const b = before.get(id); if (!b) added++; else if (b !== it) changed++; }
+  for (const id of before.keys()) if (!map.has(id)) removed++;
+  store.items = [...map.values()];
+  store.deleted = [...tomb].map(([id, at]) => ({ id, at })).slice(-2000);
+  const seen = new Set(store.log.map(l => l.id || JSON.stringify(l)));
+  (data.log || []).forEach(l => { const k = l.id || JSON.stringify(l); if (!seen.has(k)) { seen.add(k); store.log.push(l); } });
+  store.log.sort((a, b) => String(b.date).localeCompare(String(a.date)));
+  store.lastLoaded = nowISO();
+  save(false);
+  return { added, changed, removed };
+}
+async function loadUpdate(f) {
+  let data; try { data = JSON.parse(await f.text()); } catch (_) { data = null; }
+  if (!data || data.format !== "emergency-supplies-backup") { toast("That file isn't an Emergency Supplies update.", 4000); return; }
+  const r = mergeIn(data); render();
+  const parts = [r.added && `${r.added} added`, r.changed && `${r.changed} changed`, r.removed && `${r.removed} removed`].filter(Boolean);
+  toast(parts.length ? `Update loaded: ${parts.join(", ")}.` : "Update loaded. You were already up to date.", 4500);
+}
+
+
+/* ---------- pop-up alerts (shown when the app is open) ---------- */
+const alertKey = i => `${i.id}|${i.useBy}|${statusOf(i)}`;
+function dueAlerts() {
+  const now = Date.now();
+  return store.items.filter(i => {
+    const s = statusOf(i); if (s !== "soon" && s !== "expired") return false;
+    const a = store.alerts[alertKey(i)];
+    return !a || (a.snoozeUntil && a.snoozeUntil <= now);
+  }).sort((a, b) => a.useBy.localeCompare(b.useBy));
+}
+let snoozeUnit = "days";
+function checkAlerts() {
+  const ad = $("#alertDlg");
+  if (ad.open || dlg.open) return;
+  const due = dueAlerts(); if (!due.length) return;
+  const months = Number(store.settings.alertMonths) || 2;
+  ad.innerHTML = `<div class="a-head">🔔 Supply Alert</div>
+    <div class="a-body">${due.map(i => `<div class="a-item"><b>${esc(i.name)}</b>
+      <div>Use By: ${esc(fmtDate(i.useBy))}</div>
+      <div>${esc(i.qty ?? "")} ${esc(i.unit || "")}${i.location ? " · " + esc(i.location) : ""}</div>
+      <em>${statusOf(i) === "expired" ? "Expired: " + esc(whenText(i).replace("Expired ", "")) : esc(whenText(i)) + ". Eat it or donate it."}</em></div>`).join("")}</div>
+    <div class="a-snooze"><label for="a_n">Snooze for:</label>
+      <div class="a-row"><input id="a_n" type="number" min="1" step="1" value="${snoozeUnit === "weeks" ? 1 : 7}">
+        <button type="button" class="seg2" data-unit="days" aria-pressed="${snoozeUnit === "days"}">Days</button>
+        <button type="button" class="seg2" data-unit="weeks" aria-pressed="${snoozeUnit === "weeks"}">Weeks</button></div></div>
+    <div class="a-foot"><button type="button" class="a-accept" data-accept>Accept</button><button type="button" class="a-snz" data-snooze>Snooze</button></div>`;
+  ad.onclick = e => {
+    const t = e.target.closest("button"); if (!t) return;
+    if (t.dataset.unit) { snoozeUnit = t.dataset.unit; ad.querySelectorAll("[data-unit]").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.unit === snoozeUnit))); return; }
+    if (t.matches("[data-accept]")) { due.forEach(i => store.alerts[alertKey(i)] = { accepted: nowISO() }); }
+    else if (t.matches("[data-snooze]")) {
+      const n = Math.max(1, Math.round(Number($("#a_n").value) || 1));
+      const until = Date.now() + n * (snoozeUnit === "weeks" ? 7 : 1) * 864e5;
+      due.forEach(i => store.alerts[alertKey(i)] = { snoozeUntil: until });
+      toast(`Snoozed for ${n} ${snoozeUnit === "weeks" ? "week" : "day"}${n === 1 ? "" : "s"}`);
+    } else return;
+    const live = new Set(store.items.map(alertKey));
+    Object.keys(store.alerts).forEach(k => { if (!live.has(k)) delete store.alerts[k]; });
+    save(false); ad.close();
+  };
+  ad.addEventListener("cancel", e => e.preventDefault(), { once: true });
+  ad.showModal();
+}
+setInterval(checkAlerts, 30 * 60 * 1000);
+document.addEventListener("visibilitychange", () => { if (!document.hidden) setTimeout(checkAlerts, 600); });
+dlg.addEventListener("close", () => setTimeout(checkAlerts, 300));
+
+/* ---------- guide ---------- */
+function openGuide() {
+  openDlg(`<div class="d-head"><h2>Guide</h2><button class="x" type="button" data-close aria-label="Close">×</button></div>
+    <div class="d-body guide">
+      <h3>How it works</h3>
+      <p>Every item is listed by its Use By date, soonest first. Items within <b>${Number(store.settings.alertMonths) || 2} months</b> of that date are marked orange and listed in a reminder at the top, so you can eat or donate them in time. Expired items turn red. Items with no date (lighters, tools, ammunition) are listed last in gray.</p>
+      <h3>Pop-up alerts</h3>
+      <p>When you open the app, a red <b>Supply Alert</b> pops up for anything that has reached the warning time or expired. <b>Accept</b> means you've seen it: it won't pop up again until that item expires. <b>Snooze</b> brings it back after the days or weeks you choose. While the app stays open, it checks every half hour and whenever you come back to it. Each phone keeps its own Accept and Snooze choices.</p>
+      <h3>Adding items</h3>
+      <ol><li>Click <b>+ Add item</b>.</li><li>Type the name, pick a category, and enter the <b>Use By</b> date printed on the package. Leave it blank if it doesn't expire.</li><li>Enter the quantity, unit and where it's stored, then <b>Save</b>.</li></ol>
+      <p>Same item with a different date? Open it with <b>Edit</b> and click <b>Add another batch</b>. Each batch gets its own line and date.</p>
+      <h3>Eating, donating and restocking</h3>
+      <p>Click <b>Used</b> or <b>Donated</b> on a line and enter how many. The quantity goes down, and the item comes off the list when it reaches zero. Everything is recorded in the <b>Used &amp; donated log</b>, handy for knowing what to restock and for donation records.</p>
+      <h3>Finding things</h3>
+      <p>Click a box in the status row (Expired, Use soon, Good, No date) to show only those; click it again to show all. Use the search box and the category and location filters to narrow it down.</p>
+      <h3>Where your list is kept</h3>
+      <p>Inside this browser, on this computer. No account, nothing sent anywhere. Keep this file in one folder (for example Documents) and open it in Chrome or Edge, not in a private or incognito window.</p>
+      <p><b>Back up regularly</b> with <b>Backup / Export → Back up everything</b>. Clearing your browser's history and site data can erase the list. To move it to another computer, or share it with family, restore that backup there.</p>
+      <h3>Keeping two phones in step</h3>
+      <ol><li>After adding or using items, tap <b>Send update</b> (it shows a dot when you have changes to send). On an iPhone, choose <b>Mail</b> or <b>Messages</b> and send it to your partner.</li>
+        <li>On the other phone, open the attachment, tap the share button, choose <b>Save to Files</b>, and save it.</li>
+        <li>Open the app, tap <b>Load update</b>, and pick that file.</li></ol>
+      <p>Load update <b>merges</b>: new items are added, changed items take the newest version, and items either of you used up or deleted come off. Neither phone loses its own changes, even if you both made some.</p>
+      <h3>Changing the warning time</h3>
+      <p><b>Backup / Export</b> → “Warn me this many months before the Use By date.”</p>
+    </div>
+    <div class="d-foot"><button class="btn primary" type="button" data-close>Got it</button></div>`);
+}
+
+/* ---------- wiring ---------- */
+$("#addBtn").addEventListener("click", () => openEditor());
+$("#guideBtn").addEventListener("click", openGuide);
+$("#moreBtn").addEventListener("click", openMore);
+$("#logBtn").addEventListener("click", openLog);
+$("#sendBtn").addEventListener("click", sendUpdate);
+$("#loadBtn").addEventListener("click", () => $("#loadFile").click());
+$("#loadFile").addEventListener("change", e => { const f = e.target.files[0]; e.target.value = ""; if (f) loadUpdate(f); });
+$("#q").addEventListener("input", e => { V.q = e.target.value; render(); });
+$("#catFilter").addEventListener("change", e => { V.cat = e.target.value; render(); });
+$("#locFilter").addEventListener("change", e => { V.loc = e.target.value; render(); });
+$("#status").addEventListener("click", e => { const b = e.target.closest("[data-status]"); if (b) { V.status = V.status === b.dataset.status ? "all" : b.dataset.status; render(); } });
+$("#list").addEventListener("click", e => {
+  const t = e.target.closest("button"); if (!t) return;
+  if (t.dataset.use) openTake(t.dataset.use, "used");
+  else if (t.dataset.donate) openTake(t.dataset.donate, "donated");
+  else if (t.dataset.edit) openEditor(store.items.find(x => x.id === t.dataset.edit));
+  else if (t.dataset.act === "add") openEditor();
+  else if (t.dataset.act === "clear") { V.q = ""; V.cat = V.loc = V.status = "all"; $("#q").value = ""; render(); }
+});
+
+load();
+if (!canSave) { const b = $("#banner"); b.textContent = "This browser won't let the app save anything. Open the file in Chrome or Edge, and not in a private/incognito window."; b.className = "banner warn"; }
+else if (store.items.length && (!store.lastBackup || daysBetween(store.lastBackup, todayStr()) > 30)) {
+  const b = $("#banner"); b.textContent = `Your list lives only in this browser. ${store.lastBackup ? "It's been over a month since your last backup" : "You haven't made a backup yet"}: Backup / Export → Back up everything.`; b.className = "banner";
+}
+render();
+setTimeout(checkAlerts, 700);
+</script>
+</body>
+</html>
